@@ -1,6 +1,28 @@
 import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
-import { initialState, transition, type Action, type State } from "./model";
+import posthog from "posthog-js";
+import {
+  currentPerson,
+  initialState,
+  transition,
+  type Action,
+  type Person,
+  type State,
+} from "./model";
 import { parseState, readState, saveState, type StoragePort } from "./storage";
+
+const posthogConfigured = Boolean(
+  import.meta.env.VITE_PUBLIC_POSTHOG_PROJECT_TOKEN && import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+);
+
+function identifyPerson(person: Person) {
+  if (!posthogConfigured) return;
+  posthog.identify(person.id, { name: person.name, role: person.role });
+}
+
+function resetPosthog() {
+  if (!posthogConfigured) return;
+  posthog.reset();
+}
 function browserStorage(): StoragePort | null {
   try {
     return window.localStorage;
@@ -15,6 +37,8 @@ function useStore() {
   const [error, setError] = useState("");
   const [blocked, setBlocked] = useState(loaded.blocked);
   const latest = useRef(state);
+  const restoredPerson = useRef(currentPerson(loaded.state));
+  const restoredIdentityHandled = useRef(false);
   function commit(next: State, replace = false) {
     latest.current = next;
     setState(next);
@@ -30,7 +54,16 @@ function useStore() {
   }
   function run(action: Action) {
     try {
-      commit(transition(latest.current, action));
+      const previousPerson = currentPerson(latest.current);
+      const next = transition(latest.current, action);
+      const nextPerson = currentPerson(next);
+      commit(next);
+
+      if (action.type === "select_person" && previousPerson?.id !== nextPerson?.id) {
+        if (previousPerson) resetPosthog();
+        if (nextPerson) identifyPerson(nextPerson);
+      }
+
       return true;
     } catch (e) {
       setError(
@@ -43,8 +76,16 @@ function useStore() {
   }
   function importState(raw: string) {
     try {
+      const previousPerson = currentPerson(latest.current);
       const next = parseState(raw);
+      const nextPerson = currentPerson(next);
       commit(next, true);
+
+      if (previousPerson?.id !== nextPerson?.id) {
+        if (previousPerson) resetPosthog();
+        if (nextPerson) identifyPerson(nextPerson);
+      }
+
       return true;
     } catch (e) {
       setError((e as Error).message);
@@ -53,6 +94,12 @@ function useStore() {
   }
   useEffect(() => {
     document.documentElement.classList.remove("dark");
+  }, []);
+  useEffect(() => {
+    if (restoredIdentityHandled.current) return;
+
+    restoredIdentityHandled.current = true;
+    if (restoredPerson.current) identifyPerson(restoredPerson.current);
   }, []);
   return {
     state,
@@ -63,7 +110,10 @@ function useStore() {
     run,
     importState,
     clearError: () => setError(""),
-    reset: () => commit(initialState(), true),
+    reset: () => {
+      if (currentPerson(latest.current)) resetPosthog();
+      commit(initialState(), true);
+    },
   };
 }
 type Store = ReturnType<typeof useStore>;

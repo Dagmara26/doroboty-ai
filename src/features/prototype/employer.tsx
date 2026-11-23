@@ -1,3 +1,4 @@
+import posthog from "posthog-js";
 import { useState, type FormEvent } from "react";
 import { Link, useNavigate, useParams } from "react-router";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -13,9 +14,19 @@ import {
   contractLabels,
 } from "@/features/jobs/presentation";
 import { currentPerson, jobSchema } from "./model";
+import { logPostHogOutcome } from "@/lib/posthog-logger";
 import { usePrototype } from "./store";
 import { Field } from "./workspace";
 import { Empty, NotFound, PageTitle } from "./shell";
+
+const posthogConfigured = Boolean(
+  import.meta.env.VITE_PUBLIC_POSTHOG_PROJECT_TOKEN && import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+);
+
+function captureEvent(event: string, properties: Record<string, boolean | string>) {
+  if (!posthogConfigured) return;
+  posthog.capture(event, properties);
+}
 
 export function EmployerJobs() {
   const { state } = usePrototype();
@@ -133,7 +144,19 @@ export function EmployerJobEditor() {
       );
       return;
     }
-    if (run({ type: "publish", job: parsed.data })) navigate("/app/oferty");
+    if (run({ type: "publish", job: parsed.data })) {
+      captureEvent("job_published", {
+        is_update: Boolean(existing),
+        job_category: parsed.data.category,
+        job_seniority: parsed.data.seniority,
+      });
+      logPostHogOutcome("job publication completed", {
+        is_update: Boolean(existing),
+        job_category: parsed.data.category,
+        job_seniority: parsed.data.seniority,
+      });
+      navigate("/app/oferty");
+    }
   }
   return (
     <>
@@ -171,6 +194,9 @@ export function EmployerJobEditor() {
                 `${title}\n\nO roli\n${source.trim().slice(0, 10000)}\n\nJak pracujemy\nŁączymy potrzeby użytkowników, odpowiedzialne wykorzystanie AI i mierzalne efekty.\n\nProces rekrutacji\nPrześlij aplikację i opowiedz o projekcie, w którym Twoje decyzje wpłynęły na wynik.`,
               );
               setApproved(false);
+              captureEvent("job_description_generated", {
+                is_update: Boolean(existing),
+              });
             }}
           >
             Przygotuj opis z AI

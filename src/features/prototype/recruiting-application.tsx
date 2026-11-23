@@ -1,9 +1,23 @@
+import posthog from "posthog-js";
 import { useLayoutEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { ApplicationRecord } from "./application-record";
 import { nextStages, stageLabels, type Application } from "./model";
 import { usePrototype } from "./store";
+
+const posthogConfigured = Boolean(
+  import.meta.env.VITE_PUBLIC_POSTHOG_PROJECT_TOKEN && import.meta.env.VITE_PUBLIC_POSTHOG_HOST,
+);
+
+function captureStageChange(previousStage: string, nextStage: string, hasNote: boolean) {
+  if (!posthogConfigured) return;
+  posthog.capture("application_stage_changed", {
+    previous_stage: previousStage,
+    next_stage: nextStage,
+    has_note: hasNote,
+  });
+}
 
 export function RecruitingApplication({ application }: { application: Application }) {
   const { state, run } = usePrototype();
@@ -40,6 +54,7 @@ export function RecruitingApplication({ application }: { application: Applicatio
                     variant={stage === "rejected" ? "outline" : "default"}
                     onClick={() => {
                       if (run({ type: "stage", applicationId: application.id, stage, note })) {
+                        captureStageChange(application.stage, stage, Boolean(note.trim()));
                         setNote("");
                         setAnnouncement(`Zapisano etap: ${stageLabels[stage]}.`);
                         pendingFocus.current = true;
