@@ -995,3 +995,72 @@ test("candidate snapshot supports custom CV and long content at desktop and mobi
     record.answer,
   );
 });
+
+test("E5: employer invites and defers from the own-work card list", async ({ page }) => {
+  await choose(page, "Karolina Wiśniewska");
+  await page.goto("/#/app/kandydaci");
+  await page.getByRole("combobox", { name: "Oferta" }).click();
+  await page.getByRole("option", { name: "AI Operations Specialist" }).click();
+  await expect(page.getByLabel("Podsumowanie decyzji")).toContainText("Kandydaci: 12");
+  await expect(page.getByRole("region", { name: "Karta własnej pracy" })).toHaveCount(12);
+  await page.getByRole("button", { name: /Odłóż.*Marta G\./ }).click();
+  await expect(page.getByLabel("Podsumowanie decyzji")).toContainText("Odłożeni: 1");
+  // Order stays stable: a deferred candidate keeps its place.
+  await expect(page.locator("article").first()).toContainText("Marta G.");
+  await expect(page.locator("article").first()).toContainText("Odłożony");
+  await page.getByRole("button", { name: /Zaproś na rozmowę.*Marta G\./ }).click();
+  await expect(page.getByLabel("Podsumowanie decyzji")).toContainText("Zaproszeni: 1");
+  await expect(page.locator(":focus")).toHaveText("Zaproszenie na rozmowę");
+  await page.goto("/#/app/settings");
+  await page.getByRole("checkbox", { name: /Pokazuj kartę własnej pracy/ }).click();
+  await page.goto("/#/app/kandydaci/e5-a03");
+  await expect(page.getByRole("heading", { name: "Ola F.", exact: true })).toBeVisible();
+  await expect(page.getByRole("region", { name: "Karta własnej pracy" })).toHaveCount(0);
+  await page.goto("/#/auth/login");
+  await expect(page.getByRole("button", { name: /Wejdź jako Ola F\./ })).toHaveCount(0);
+});
+
+test("unexpected rendering error shows recovery steps instead of a blank page", async ({
+  page,
+}) => {
+  const external: string[] = [];
+  page.on("request", (r) => {
+    if (!r.url().startsWith("http://127.0.0.1:3106") && !/^(data|blob):/.test(r.url()))
+      external.push(r.url());
+  });
+  await choose(page, "Anna Kowalska");
+  const saved = await page.evaluate((key) => localStorage.getItem(key), STORAGE_KEY);
+  expect(saved).not.toBeNull();
+  // Simulate a defect inside rendering: salary formatting throws on the offer list.
+  await page.addInitScript(() => {
+    Object.defineProperty(Intl.NumberFormat.prototype, "format", {
+      get() {
+        throw new Error("Simulated rendering failure");
+      },
+    });
+  });
+  await page.goto("/#/oferty");
+  await page.reload();
+  const heading = page.getByRole("heading", { name: "Coś poszło nie tak", level: 1 });
+  await expect(heading).toBeVisible();
+  await expect(heading).toBeFocused();
+  await expect(page.getByRole("button", { name: "Odśwież stronę", exact: true })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Wróć na stronę główną", exact: true }),
+  ).toBeVisible();
+  const accessibility = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa"]).analyze();
+  expect(
+    accessibility.violations.filter((v) => ["serious", "critical"].includes(v.impact!)),
+  ).toEqual([]);
+  await page.screenshot({ path: "artifacts/error-boundary-desktop.png", fullPage: true });
+  const download = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Pobierz kopię zapisu", exact: true }).click();
+  const file = await download;
+  expect(file.suggestedFilename()).toBe("doroboty-zapis-do-odzyskania.txt");
+  expect(await readFile((await file.path())!, "utf8")).toBe(saved);
+  expect(await page.evaluate((key) => localStorage.getItem(key), STORAGE_KEY)).toBe(saved);
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(390);
+  await page.screenshot({ path: "artifacts/error-boundary-mobile.png", fullPage: true });
+  expect(external).toEqual([]);
+});

@@ -1,0 +1,511 @@
+{
+  "source": "E2 prototype, Apply set A01–A12 (anonymized June 2026 applications). Card sentences copied verbatim from candidate profile text.",
+  "people": [
+    {
+      "id": "candidate-e5-a01",
+      "role": "candidate",
+      "listed": false,
+      "name": "Marta G.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Uczestniczyłem w warsztatach i tworzyłem przykładowe prompty. Nie sprawdzaliśmy późniejszego użycia. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Uczestniczyłem w warsztatach i tworzyłem przykładowe prompty. Nie sprawdzaliśmy późniejszego użycia. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Część danych jest prywatna. Mam wersję z usuniętymi nazwami klientów. Link: link usunięty przy anonimizacji",
+      "exampleScore": 80,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a02",
+      "role": "candidate",
+      "listed": false,
+      "name": "Norbert C.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: katalog produktów. Zmieniłem konkretny krok procesu z właścicielem operacji. Sprawdziliśmy czas pracy przed zmianą i po niej. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: katalog produktów. Zmieniłem konkretny krok procesu z właścicielem operacji. Sprawdziliśmy czas pracy przed zmianą i po niej. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie. Link: link usunięty przy anonimizacji",
+      "exampleScore": 77,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a03",
+      "role": "candidate",
+      "listed": false,
+      "name": "Ola F.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: dokumenty operacyjne. Prowadziłem obserwacje procesu, rozmowy z użytkownikami i wdrożenie w jednym zespole. Uzgodniliśmy pomiar użycia. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: dokumenty operacyjne. Prowadziłem obserwacje procesu, rozmowy z użytkownikami i wdrożenie w jednym zespole. Uzgodniliśmy pomiar użycia. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie. Link: link usunięty przy anonimizacji",
+      "exampleScore": 76,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a04",
+      "role": "candidate",
+      "listed": false,
+      "name": "Paweł J.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Pisałem instrukcje do prototypu. Decyzja o zmianie procesu i pomiar adopcji były po stronie managera. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Pisałem instrukcje do prototypu. Decyzja o zmianie procesu i pomiar adopcji były po stronie managera. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Część danych jest prywatna. Mam wersję z usuniętymi nazwami klientów. Link: link usunięty przy anonimizacji",
+      "exampleScore": 79,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a05",
+      "role": "candidate",
+      "listed": false,
+      "name": "Rita H.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: dokumenty operacyjne. Zrobiłem demonstrację rozwiązania na własnych danych. Nie zostało włączone do pracy zespołu. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: dokumenty operacyjne. Zrobiłem demonstrację rozwiązania na własnych danych. Nie zostało włączone do pracy zespołu. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie. Link: link usunięty przy anonimizacji",
+      "exampleScore": 93,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a06",
+      "role": "candidate",
+      "listed": false,
+      "name": "Szymon O.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: wiedza zespołu. Prowadziłem obserwacje procesu, rozmowy z użytkownikami i wdrożenie w jednym zespole. Uzgodniliśmy pomiar użycia. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: wiedza zespołu. Prowadziłem obserwacje procesu, rozmowy z użytkownikami i wdrożenie w jednym zespole. Uzgodniliśmy pomiar użycia. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów. Link: link usunięty przy anonimizacji",
+      "exampleScore": 71,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a07",
+      "role": "candidate",
+      "listed": false,
+      "name": "Tamara U.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: wiedza zespołu. Pisałem instrukcje do prototypu. Decyzja o zmianie procesu i pomiar adopcji były po stronie managera. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: wiedza zespołu. Pisałem instrukcje do prototypu. Decyzja o zmianie procesu i pomiar adopcji były po stronie managera. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie. Link: link usunięty przy anonimizacji",
+      "exampleScore": 78,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a08",
+      "role": "candidate",
+      "listed": false,
+      "name": "Wiktor E.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: planowanie dostaw. Odpowiadałem za przejście od prototypu do codziennej pracy. Zbieraliśmy dane o adopcji i poprawialiśmy instrukcje. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: planowanie dostaw. Odpowiadałem za przejście od prototypu do codziennej pracy. Zbieraliśmy dane o adopcji i poprawialiśmy instrukcje. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie. Link: link usunięty przy anonimizacji",
+      "exampleScore": 80,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a09",
+      "role": "candidate",
+      "listed": false,
+      "name": "Zuza A.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: obsługa zgłoszeń. Zmieniłem konkretny krok procesu z właścicielem operacji. Sprawdziliśmy czas pracy przed zmianą i po niej. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: obsługa zgłoszeń. Zmieniłem konkretny krok procesu z właścicielem operacji. Sprawdziliśmy czas pracy przed zmianą i po niej. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Część danych jest prywatna. Mam wersję z usuniętymi nazwami klientów. Link: link usunięty przy anonimizacji",
+      "exampleScore": 80,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a10",
+      "role": "candidate",
+      "listed": false,
+      "name": "Adam Ł.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Przygotowałem opis możliwych zastosowań i prezentację dla zespołu. Wdrożenie prowadziła inna osoba. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Przygotowałem opis możliwych zastosowań i prezentację dla zespołu. Wdrożenie prowadziła inna osoba. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów. Link: link usunięty przy anonimizacji",
+      "exampleScore": 82,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a11",
+      "role": "candidate",
+      "listed": false,
+      "name": "Beata Ś.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Zrobiłem demonstrację rozwiązania na własnych danych. Nie zostało włączone do pracy zespołu. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Zrobiłem demonstrację rozwiązania na własnych danych. Nie zostało włączone do pracy zespołu. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów. Link: link usunięty przy anonimizacji",
+      "exampleScore": 71,
+      "exampleSummary": ""
+    },
+    {
+      "id": "candidate-e5-a12",
+      "role": "candidate",
+      "listed": false,
+      "name": "Cezary Ż.",
+      "headline": "Kandydat/ka w teście E5 (dane zanonimizowane)",
+      "bio": "Przykład mojej pracy dotyczy obszaru: obsługa zgłoszeń. Wprowadziłem zmianę w pracy zespołu i sprawdzałem, jak ludzie z niej korzystają. Wybór modelu należał do inżyniera. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.",
+      "location": "Nie podano",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: obsługa zgłoszeń. Wprowadziłem zmianę w pracy zespołu i sprawdzałem, jak ludzie z niej korzystają. Wybór modelu należał do inżyniera. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów. Link: link usunięty przy anonimizacji",
+      "exampleScore": 71,
+      "exampleSummary": ""
+    }
+  ],
+  "applications": [
+    {
+      "id": "e5-a01",
+      "candidateId": "candidate-e5-a01",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Marta G.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Uczestniczyłem w warsztatach i tworzyłem przykładowe prompty. Nie sprawdzaliśmy późniejszego użycia. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Część danych jest prywatna. Mam wersję z usuniętymi nazwami klientów. Link: link usunięty przy anonimizacji",
+      "answer": "Łączę praktyczną znajomość rozwiązań AI z pracą zespołową i orientacją na wynik w obszarze: kontrola dokumentacji. Uczestniczyłem w przygotowaniu i doskonaleniu rozwiązania, uwzględniając potrzeby użytkowników oraz ograniczenia danych. Potrafię współpracować z osobami technicznymi i biznesowymi, porządkować zadania i omawiać kolejne kroki. Znam znaczenie sprawdzania efektów i odpowiedzialności za uzgodniony zakres. Chętnie przedstawię konkretny przykład oraz sposób pracy zespołu. Interesuje mnie możliwość dalszego rozwoju i pracy przy wdrożeniu odpowiadającym rzeczywistym potrzebom organizacji. Warunki rozpoczęcia współpracy oraz dostępność materiałów projektowych chciałbym uzgodnić podczas rozmowy.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 80,
+      "summary": "",
+      "ownWork": {
+        "area": "kontrola dokumentacji",
+        "self": "Uczestniczyłem w warsztatach i tworzyłem przykładowe prompty.",
+        "others": "",
+        "result": "Nie sprawdzaliśmy późniejszego użycia.",
+        "materialType": "slajdy koncepcji i przykładowe prompty",
+        "materialNote": "Część danych jest prywatna. Mam wersję z usuniętymi nazwami klientów."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:00:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a02",
+      "candidateId": "candidate-e5-a02",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Norbert C.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: katalog produktów. Zmieniłem konkretny krok procesu z właścicielem operacji. Sprawdziliśmy czas pracy przed zmianą i po niej. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie. Link: link usunięty przy anonimizacji",
+      "answer": "Łączę praktyczną znajomość rozwiązań AI z pracą zespołową i orientacją na wynik w obszarze: katalog produktów. Uczestniczyłem w przygotowaniu i doskonaleniu rozwiązania, uwzględniając potrzeby użytkowników oraz ograniczenia danych. Potrafię współpracować z osobami technicznymi i biznesowymi, porządkować zadania i omawiać kolejne kroki. Znam znaczenie sprawdzania efektów i odpowiedzialności za uzgodniony zakres. Chętnie przedstawię konkretny przykład oraz sposób pracy zespołu. Interesuje mnie możliwość dalszego rozwoju i pracy przy wdrożeniu odpowiadającym rzeczywistym potrzebom organizacji. Warunki rozpoczęcia współpracy oraz dostępność materiałów projektowych chciałbym uzgodnić podczas rozmowy. Zmieniłem konkretny krok procesu z właścicielem operacji. Sprawdziliśmy czas pracy przed zmianą i po niej.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 77,
+      "summary": "",
+      "ownWork": {
+        "area": "katalog produktów",
+        "self": "Zmieniłem konkretny krok procesu z właścicielem operacji.",
+        "others": "",
+        "result": "Sprawdziliśmy czas pracy przed zmianą i po niej.",
+        "materialType": "opis zmiany procesu, użycia i rozmów z użytkownikami",
+        "materialNote": "Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:01:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a03",
+      "candidateId": "candidate-e5-a03",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Ola F.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: dokumenty operacyjne. Prowadziłem obserwacje procesu, rozmowy z użytkownikami i wdrożenie w jednym zespole. Uzgodniliśmy pomiar użycia. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie. Link: link usunięty przy anonimizacji",
+      "answer": "Chodzi o projekt z obszaru: dokumenty operacyjne. Prowadziłem obserwacje procesu, rozmowy z użytkownikami i wdrożenie w jednym zespole. Uzgodniliśmy pomiar użycia. Mogę omówić przykład i rolę pozostałych osób. Chcę znać pierwszy projekt oraz dostęp do danych. Zakres wdrożenia był szerszy niż moja praca. Materiały i termin rozpoczęcia musimy uzgodnić.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 76,
+      "summary": "",
+      "ownWork": {
+        "area": "dokumenty operacyjne",
+        "self": "Prowadziłem obserwacje procesu, rozmowy z użytkownikami i wdrożenie w jednym zespole.",
+        "others": "",
+        "result": "Uzgodniliśmy pomiar użycia.",
+        "materialType": "opis zmiany procesu, użycia i rozmów z użytkownikami",
+        "materialNote": "Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:02:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a04",
+      "candidateId": "candidate-e5-a04",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Paweł J.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Pisałem instrukcje do prototypu. Decyzja o zmianie procesu i pomiar adopcji były po stronie managera. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Część danych jest prywatna. Mam wersję z usuniętymi nazwami klientów. Link: link usunięty przy anonimizacji",
+      "answer": "Moje doświadczenie w projektach AI odpowiada zadaniom opisanym w ogłoszeniu dla obszaru: kontrola dokumentacji. Uczestniczyłem w przygotowaniu i doskonaleniu rozwiązania, uwzględniając potrzeby użytkowników oraz ograniczenia danych. Potrafię współpracować z osobami technicznymi i biznesowymi, porządkować zadania i omawiać kolejne kroki. Znam znaczenie sprawdzania efektów i odpowiedzialności za uzgodniony zakres. Chętnie przedstawię konkretny przykład oraz sposób pracy zespołu. Interesuje mnie możliwość dalszego rozwoju i pracy przy wdrożeniu odpowiadającym rzeczywistym potrzebom organizacji. Warunki rozpoczęcia współpracy oraz dostępność materiałów projektowych chciałbym uzgodnić podczas rozmowy.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 79,
+      "summary": "",
+      "ownWork": {
+        "area": "kontrola dokumentacji",
+        "self": "Pisałem instrukcje do prototypu.",
+        "others": "Decyzja o zmianie procesu i pomiar adopcji były po stronie managera.",
+        "result": "",
+        "materialType": "slajdy koncepcji i przykładowe prompty",
+        "materialNote": "Część danych jest prywatna. Mam wersję z usuniętymi nazwami klientów."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:03:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a05",
+      "candidateId": "candidate-e5-a05",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Rita H.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: dokumenty operacyjne. Zrobiłem demonstrację rozwiązania na własnych danych. Nie zostało włączone do pracy zespołu. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie. Link: link usunięty przy anonimizacji",
+      "answer": "Łączę praktyczną znajomość rozwiązań AI z pracą zespołową i orientacją na wynik w obszarze: dokumenty operacyjne. Uczestniczyłem w przygotowaniu i doskonaleniu rozwiązania, uwzględniając potrzeby użytkowników oraz ograniczenia danych. Potrafię współpracować z osobami technicznymi i biznesowymi, porządkować zadania i omawiać kolejne kroki. Znam znaczenie sprawdzania efektów i odpowiedzialności za uzgodniony zakres. Chętnie przedstawię konkretny przykład oraz sposób pracy zespołu. Interesuje mnie możliwość dalszego rozwoju i pracy przy wdrożeniu odpowiadającym rzeczywistym potrzebom organizacji. Warunki rozpoczęcia współpracy oraz dostępność materiałów projektowych chciałbym uzgodnić podczas rozmowy.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 93,
+      "summary": "",
+      "ownWork": {
+        "area": "dokumenty operacyjne",
+        "self": "Zrobiłem demonstrację rozwiązania na własnych danych.",
+        "others": "",
+        "result": "Nie zostało włączone do pracy zespołu.",
+        "materialType": "slajdy koncepcji i przykładowe prompty",
+        "materialNote": "Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:04:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a06",
+      "candidateId": "candidate-e5-a06",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Szymon O.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: wiedza zespołu. Prowadziłem obserwacje procesu, rozmowy z użytkownikami i wdrożenie w jednym zespole. Uzgodniliśmy pomiar użycia. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów. Link: link usunięty przy anonimizacji",
+      "answer": "Chodzi o projekt z obszaru: wiedza zespołu. Prowadziłem obserwacje procesu, rozmowy z użytkownikami i wdrożenie w jednym zespole. Uzgodniliśmy pomiar użycia. Mogę omówić przykład i rolę pozostałych osób. Chcę znać pierwszy projekt oraz dostęp do danych. Zakres wdrożenia był szerszy niż moja praca. Materiały i termin rozpoczęcia musimy uzgodnić.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 71,
+      "summary": "",
+      "ownWork": {
+        "area": "wiedza zespołu",
+        "self": "Prowadziłem obserwacje procesu, rozmowy z użytkownikami i wdrożenie w jednym zespole.",
+        "others": "",
+        "result": "Uzgodniliśmy pomiar użycia.",
+        "materialType": "opis zmiany procesu, użycia i rozmów z użytkownikami",
+        "materialNote": "Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:05:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a07",
+      "candidateId": "candidate-e5-a07",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Tamara U.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: wiedza zespołu. Pisałem instrukcje do prototypu. Decyzja o zmianie procesu i pomiar adopcji były po stronie managera. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie. Link: link usunięty przy anonimizacji",
+      "answer": "Moje doświadczenie w projektach AI odpowiada zadaniom opisanym w ogłoszeniu dla obszaru: wiedza zespołu. Uczestniczyłem w przygotowaniu i doskonaleniu rozwiązania, uwzględniając potrzeby użytkowników oraz ograniczenia danych. Potrafię współpracować z osobami technicznymi i biznesowymi, porządkować zadania i omawiać kolejne kroki. Znam znaczenie sprawdzania efektów i odpowiedzialności za uzgodniony zakres. Chętnie przedstawię konkretny przykład oraz sposób pracy zespołu. Interesuje mnie możliwość dalszego rozwoju i pracy przy wdrożeniu odpowiadającym rzeczywistym potrzebom organizacji. Warunki rozpoczęcia współpracy oraz dostępność materiałów projektowych chciałbym uzgodnić podczas rozmowy.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 78,
+      "summary": "",
+      "ownWork": {
+        "area": "wiedza zespołu",
+        "self": "Pisałem instrukcje do prototypu.",
+        "others": "Decyzja o zmianie procesu i pomiar adopcji były po stronie managera.",
+        "result": "",
+        "materialType": "slajdy koncepcji i przykładowe prompty",
+        "materialNote": "Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:06:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a08",
+      "candidateId": "candidate-e5-a08",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Wiktor E.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: planowanie dostaw. Odpowiadałem za przejście od prototypu do codziennej pracy. Zbieraliśmy dane o adopcji i poprawialiśmy instrukcje. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie. Link: link usunięty przy anonimizacji",
+      "answer": "Moje doświadczenie w projektach AI odpowiada zadaniom opisanym w ogłoszeniu dla obszaru: planowanie dostaw. Uczestniczyłem w przygotowaniu i doskonaleniu rozwiązania, uwzględniając potrzeby użytkowników oraz ograniczenia danych. Potrafię współpracować z osobami technicznymi i biznesowymi, porządkować zadania i omawiać kolejne kroki. Znam znaczenie sprawdzania efektów i odpowiedzialności za uzgodniony zakres. Chętnie przedstawię konkretny przykład oraz sposób pracy zespołu. Interesuje mnie możliwość dalszego rozwoju i pracy przy wdrożeniu odpowiadającym rzeczywistym potrzebom organizacji. Warunki rozpoczęcia współpracy oraz dostępność materiałów projektowych chciałbym uzgodnić podczas rozmowy.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 80,
+      "summary": "",
+      "ownWork": {
+        "area": "planowanie dostaw",
+        "self": "Odpowiadałem za przejście od prototypu do codziennej pracy.",
+        "others": "",
+        "result": "Zbieraliśmy dane o adopcji i poprawialiśmy instrukcje.",
+        "materialType": "opis zmiany procesu, użycia i rozmów z użytkownikami",
+        "materialNote": "Publiczny opis nie zawiera wszystkich szczegółów. Mogę omówić zakres na rozmowie."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:07:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a09",
+      "candidateId": "candidate-e5-a09",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Zuza A.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: obsługa zgłoszeń. Zmieniłem konkretny krok procesu z właścicielem operacji. Sprawdziliśmy czas pracy przed zmianą i po niej. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Część danych jest prywatna. Mam wersję z usuniętymi nazwami klientów. Link: link usunięty przy anonimizacji",
+      "answer": "W dotychczasowych projektach rozwijałem umiejętności potrzebne do wdrożeń AI, w tym w obszarze: obsługa zgłoszeń. Uczestniczyłem w przygotowaniu i doskonaleniu rozwiązania, uwzględniając potrzeby użytkowników oraz ograniczenia danych. Potrafię współpracować z osobami technicznymi i biznesowymi, porządkować zadania i omawiać kolejne kroki. Znam znaczenie sprawdzania efektów i odpowiedzialności za uzgodniony zakres. Chętnie przedstawię konkretny przykład oraz sposób pracy zespołu. Interesuje mnie możliwość dalszego rozwoju i pracy przy wdrożeniu odpowiadającym rzeczywistym potrzebom organizacji. Warunki rozpoczęcia współpracy oraz dostępność materiałów projektowych chciałbym uzgodnić podczas rozmowy. Zmieniłem konkretny krok procesu z właścicielem operacji. Sprawdziliśmy czas pracy przed zmianą i po niej.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 80,
+      "summary": "",
+      "ownWork": {
+        "area": "obsługa zgłoszeń",
+        "self": "Zmieniłem konkretny krok procesu z właścicielem operacji.",
+        "others": "",
+        "result": "Sprawdziliśmy czas pracy przed zmianą i po niej.",
+        "materialType": "opis zmiany procesu, użycia i rozmów z użytkownikami",
+        "materialNote": "Część danych jest prywatna. Mam wersję z usuniętymi nazwami klientów."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:08:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a10",
+      "candidateId": "candidate-e5-a10",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Adam Ł.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Przygotowałem opis możliwych zastosowań i prezentację dla zespołu. Wdrożenie prowadziła inna osoba. Projekt miał ograniczony zakres i trwał kilka iteracji. Część początkowych pomysłów odłożyliśmy. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów. Link: link usunięty przy anonimizacji",
+      "answer": "Łączę praktyczną znajomość rozwiązań AI z pracą zespołową i orientacją na wynik w obszarze: kontrola dokumentacji. Uczestniczyłem w przygotowaniu i doskonaleniu rozwiązania, uwzględniając potrzeby użytkowników oraz ograniczenia danych. Potrafię współpracować z osobami technicznymi i biznesowymi, porządkować zadania i omawiać kolejne kroki. Znam znaczenie sprawdzania efektów i odpowiedzialności za uzgodniony zakres. Chętnie przedstawię konkretny przykład oraz sposób pracy zespołu. Interesuje mnie możliwość dalszego rozwoju i pracy przy wdrożeniu odpowiadającym rzeczywistym potrzebom organizacji. Warunki rozpoczęcia współpracy oraz dostępność materiałów projektowych chciałbym uzgodnić podczas rozmowy.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 82,
+      "summary": "",
+      "ownWork": {
+        "area": "kontrola dokumentacji",
+        "self": "Przygotowałem opis możliwych zastosowań i prezentację dla zespołu.",
+        "others": "Wdrożenie prowadziła inna osoba.",
+        "result": "",
+        "materialType": "slajdy koncepcji i przykładowe prompty",
+        "materialNote": "Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:09:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a11",
+      "candidateId": "candidate-e5-a11",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Beata Ś.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: kontrola dokumentacji. Zrobiłem demonstrację rozwiązania na własnych danych. Nie zostało włączone do pracy zespołu. Pracowaliśmy w kilkuosobowym zespole, równolegle z bieżącymi zadaniami operacyjnymi. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: slajdy koncepcji i przykładowe prompty. Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów. Link: link usunięty przy anonimizacji",
+      "answer": "Łączę praktyczną znajomość rozwiązań AI z pracą zespołową i orientacją na wynik w obszarze: kontrola dokumentacji. Uczestniczyłem w przygotowaniu i doskonaleniu rozwiązania, uwzględniając potrzeby użytkowników oraz ograniczenia danych. Potrafię współpracować z osobami technicznymi i biznesowymi, porządkować zadania i omawiać kolejne kroki. Znam znaczenie sprawdzania efektów i odpowiedzialności za uzgodniony zakres. Chętnie przedstawię konkretny przykład oraz sposób pracy zespołu. Interesuje mnie możliwość dalszego rozwoju i pracy przy wdrożeniu odpowiadającym rzeczywistym potrzebom organizacji. Warunki rozpoczęcia współpracy oraz dostępność materiałów projektowych chciałbym uzgodnić podczas rozmowy.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 71,
+      "summary": "",
+      "ownWork": {
+        "area": "kontrola dokumentacji",
+        "self": "Zrobiłem demonstrację rozwiązania na własnych danych.",
+        "others": "",
+        "result": "Nie zostało włączone do pracy zespołu.",
+        "materialType": "slajdy koncepcji i przykładowe prompty",
+        "materialNote": "Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:10:00.000Z",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "e5-a12",
+      "candidateId": "candidate-e5-a12",
+      "jobId": "20000000-0000-4000-8000-000000000004",
+      "companyId": "10000000-0000-4000-8000-000000000001",
+      "jobTitle": "AI Operations Specialist",
+      "candidateName": "Cezary Ż.",
+      "cv": "Profil: Przykład mojej pracy dotyczy obszaru: obsługa zgłoszeń. Wprowadziłem zmianę w pracy zespołu i sprawdzałem, jak ludzie z niej korzystają. Wybór modelu należał do inżyniera. Najpierw sprawdziliśmy mały fragment zadania. Dopiero później zdecydowaliśmy, co rozwijać. Mogę wyjaśnić swój zakres oraz pracę pozostałych osób. Nie wszystkie materiały można opublikować.\n\nMateriały: opis zmiany procesu, użycia i rozmów z użytkownikami. Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów. Link: link usunięty przy anonimizacji",
+      "answer": "Łączę praktyczną znajomość rozwiązań AI z pracą zespołową i orientacją na wynik w obszarze: obsługa zgłoszeń. Uczestniczyłem w przygotowaniu i doskonaleniu rozwiązania, uwzględniając potrzeby użytkowników oraz ograniczenia danych. Potrafię współpracować z osobami technicznymi i biznesowymi, porządkować zadania i omawiać kolejne kroki. Znam znaczenie sprawdzania efektów i odpowiedzialności za uzgodniony zakres. Chętnie przedstawię konkretny przykład oraz sposób pracy zespołu. Interesuje mnie możliwość dalszego rozwoju i pracy przy wdrożeniu odpowiadającym rzeczywistym potrzebom organizacji. Warunki rozpoczęcia współpracy oraz dostępność materiałów projektowych chciałbym uzgodnić podczas rozmowy.",
+      "sourceNotes": "",
+      "generatedAnswer": "",
+      "score": 71,
+      "summary": "",
+      "ownWork": {
+        "area": "obsługa zgłoszeń",
+        "self": "Wprowadziłem zmianę w pracy zespołu i sprawdzałem, jak ludzie z niej korzystają.",
+        "others": "Wybór modelu należał do inżyniera.",
+        "result": "",
+        "materialType": "opis zmiany procesu, użycia i rozmów z użytkownikami",
+        "materialNote": "Za zgodą zespołu mogę udostępnić fragment materiału. Nie wysyłam danych klientów."
+      },
+      "stage": "submitted",
+      "events": [
+        {
+          "stage": "submitted",
+          "at": "2026-11-02T10:11:00.000Z",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Keep LF line endings on every OS: Prettier, design-system hashes and the packet verifier expect LF.
+* text=auto eol=lf

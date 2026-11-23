@@ -1,5 +1,6 @@
 import { useState, type ChangeEvent } from "react";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { ConfirmDialog } from "@/components/confirm-dialog";
 import { usePrototype } from "./store";
 import { serializeState, MAX_IMPORT_BYTES } from "./storage";
@@ -16,7 +17,7 @@ export function downloadText(name: string, text: string, type = "application/jso
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 export function SettingsPage() {
-  const { state, reset, importState, original } = usePrototype();
+  const { state, run, reset, importState, original } = usePrototype();
   const [pending, setPending] = useState<"reset" | "import" | null>(null);
   const [raw, setRaw] = useState("");
   const [error, setError] = useState("");
@@ -93,11 +94,40 @@ export function SettingsPage() {
         )}
         {message && <p role="status">{message}</p>}
       </section>
+      <section className="prototype-panel prototype-form mt-6" aria-labelledby="e5-heading">
+        <h2 id="e5-heading">Test E5: karta własnej pracy</h2>
+        <p>
+          Dla moderatora. Przy włączonej karcie pracodawca widzi na liście kandydatów i w ich
+          szczegółach, co kandydat zrobił sam, co robili inni i jaki był rezultat. Zmień ustawienie
+          przed sesją; uczestnik nie powinien widzieć tej strony.
+        </p>
+        <label className="flex items-center gap-3" htmlFor="own-work-card">
+          <Checkbox
+            id="own-work-card"
+            checked={state.ownWorkCard}
+            onCheckedChange={(v) => {
+              if (run({ type: "own_work_card", visible: v === true }))
+                setMessage(
+                  v ? "Karta własnej pracy jest włączona." : "Karta własnej pracy jest wyłączona.",
+                );
+            }}
+          />
+          Pokazuj kartę własnej pracy pracodawcom
+        </label>
+        <p className="record-caption">
+          Karty są przygotowane z tekstów kandydatów (zanonimizowane zgłoszenia z czerwca 2026), bez
+          dopisywania treści. Nie generuje ich model AI.
+        </p>
+      </section>
       <section className="prototype-panel prototype-form mt-6">
         <h2>O prototypie</h2>
         <p>
           Wybór osoby zastępuje logowanie. Propozycje AI, Match Score i podsumowania odtwarzają
           przygotowany scenariusz; nie oceniają kompetencji. Używaj przykładowych danych i CV.
+        </p>
+        <p className="mt-4">
+          Problem z prototypem? Napisz na kanale kursu AIPH3: adres strony, co robiłaś lub robiłeś i
+          jakiej przeglądarki używasz. Nie wysyłaj danych osobowych.
         </p>
       </section>
       <ConfirmDialog

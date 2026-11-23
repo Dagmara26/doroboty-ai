@@ -4,6 +4,7 @@ import { ProcessTimeline } from "@/components/process-timeline";
 import { RecordSheet } from "@/components/record-sheet";
 import { CvAttachment } from "./cv-attachment";
 import { MatchScore } from "./match-score";
+import { OwnWorkCard } from "./own-work-card";
 import { stageLabels, type Application, type Stage } from "./model";
 
 type RecordEvent = { stage: Stage; at: string; note?: string };
@@ -18,17 +19,28 @@ export function ApplicationRecord({
   companyName,
   audience,
   history,
+  showOwnWork = false,
   statusRef,
   children,
   footer,
 }: {
   application: Pick<
     Application,
-    "candidateId" | "candidateName" | "jobTitle" | "stage" | "answer" | "cv" | "score" | "summary"
+    | "candidateId"
+    | "candidateName"
+    | "jobTitle"
+    | "stage"
+    | "answer"
+    | "cv"
+    | "score"
+    | "summary"
+    | "ownWork"
   >;
   companyName: string;
   audience: "candidate" | "employer";
   history: RecordEvent[];
+  /** Employer-only own-work card (test E5); omit for candidates. */
+  showOwnWork?: boolean;
   statusRef?: Ref<HTMLSpanElement>;
   children?: ReactNode;
   footer?: ReactNode;
@@ -39,7 +51,7 @@ export function ApplicationRecord({
   const submitted = history[0];
   return (
     <article className="recruiting-record">
-      <header className="recruiting-header">
+      <header className="recruiting-header ph-no-capture">
         <nav aria-label="Ścieżka nawigacji" className="record-breadcrumb">
           <BackLink to={candidate ? "/app/aplikacje" : "/app/kandydaci"}>
             {candidate ? "Moje aplikacje" : "Kandydaci"}
@@ -73,6 +85,7 @@ export function ApplicationRecord({
               label: "Odpowiedź",
               content: (
                 <>
+                  {showOwnWork && application.ownWork && <OwnWorkCard work={application.ownWork} />}
                   <h3>Przesłana aplikacja</h3>
                   <p>{application.answer}</p>
                 </>
@@ -110,10 +123,12 @@ export function ApplicationRecord({
               }))}
             />
           </section>
-          <section className="record-summary" aria-labelledby="summary-heading">
-            <h2 id="summary-heading">Podsumowanie</h2>
-            <p>{application.summary}</p>
-          </section>
+          {application.summary && (
+            <section className="record-summary" aria-labelledby="summary-heading">
+              <h2 id="summary-heading">Podsumowanie</h2>
+              <p>{application.summary}</p>
+            </section>
+          )}
         </aside>
       </div>
     </article>

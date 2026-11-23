@@ -1,0 +1,4 @@
+# Netlify build settings (see docs/RELEASE.md). Node.js version comes from .nvmrc.
+[build]
+  command = "npm ci && npm run build"
+  publish = "dist"

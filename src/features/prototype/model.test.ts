@@ -33,7 +33,7 @@ describe("coherent browser scenario", () => {
     };
     expect(() => transition(s, input, time)).toThrow("Zatwierdź");
     expect(() => transition(submitted(), { ...input, consent: true }, time)).toThrow("już wysłana");
-    expect(s.applications).toHaveLength(1);
+    expect(s.applications).toHaveLength(initialState().applications.length);
   });
   it("preserves approved sources while profile and notes evolve", () => {
     const s = submitted();
@@ -112,6 +112,54 @@ describe("coherent browser scenario", () => {
     s = transition(s, { type: "toggle_saved", jobId: s.jobs[1].id });
     expect(s.drafts[0].candidateId).toBe("candidate-anna");
     expect(s.saved[0].candidateId).toBe("candidate-anna");
+  });
+  it("prepares 12 hidden E5 candidates with verbatim own-work cards for one BrightLabs job", () => {
+    const s = initialState();
+    const study = s.applications.filter((a) => a.ownWork);
+    expect(study).toHaveLength(12);
+    expect(new Set(study.map((a) => a.jobTitle))).toEqual(new Set(["AI Operations Specialist"]));
+    for (const a of study) {
+      const person = s.people.find((p) => p.id === a.candidateId)!;
+      expect(person.listed).toBe(false);
+      for (const statement of [a.ownWork!.self, a.ownWork!.others, a.ownWork!.result])
+        if (statement) expect(a.cv).toContain(statement);
+    }
+    expect(s.ownWorkCard).toBe(true);
+  });
+  it("lets an employer invite directly, defer and later invite or reject", () => {
+    let s = as(initialState(), "employer-brightlabs");
+    const stage = (applicationId: string, value: "interview_invited" | "deferred" | "rejected") =>
+      (s = transition(s, { type: "stage", applicationId, stage: value, note: "" }, time));
+    stage("e5-a01", "interview_invited");
+    stage("e5-a02", "deferred");
+    expect(() => stage("e5-a02", "deferred")).toThrow();
+    stage("e5-a02", "interview_invited");
+    stage("e5-a03", "deferred");
+    stage("e5-a03", "rejected");
+    const byId = (id: string) => s.applications.find((a) => a.id === id)!;
+    expect(byId("e5-a01").stage).toBe("interview_invited");
+    expect(byId("e5-a02").events.map((e) => e.stage)).toEqual([
+      "submitted",
+      "deferred",
+      "interview_invited",
+    ]);
+    expect(byId("e5-a03").stage).toBe("rejected");
+    expect(stateSchema.safeParse(s).success).toBe(true);
+    expect(() =>
+      transition(as(s, "employer-northstar"), {
+        type: "stage",
+        applicationId: "e5-a04",
+        stage: "deferred",
+        note: "",
+      }),
+    ).toThrow();
+  });
+  it("toggles the own-work card and loads older saves without the setting", () => {
+    const s = transition(initialState(), { type: "own_work_card", visible: false });
+    expect(s.ownWorkCard).toBe(false);
+    const legacy: Record<string, unknown> = structuredClone(initialState());
+    delete legacy.ownWorkCard;
+    expect(stateSchema.parse(legacy).ownWorkCard).toBe(true);
   });
   it("validates broken references, duplicate submissions and invalid histories on import", () => {
     const s = submitted();

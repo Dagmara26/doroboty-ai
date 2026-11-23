@@ -1,6 +1,7 @@
 import { z } from "zod";
 import marketplace from "./data/marketplace.json" with { type: "json" };
 import people from "./data/people.json" with { type: "json" };
+import e5Study from "./data/e5-study.json" with { type: "json" };
 import type { JobWithCompany } from "@/features/jobs/types";
 
 const id = z
@@ -69,6 +70,8 @@ const personSchema = profileSchema.extend({
   id,
   role: z.enum(["candidate", "employer", "operator"]),
   companyId: id.optional(),
+  /** False for prepared study candidates that are not offered in the person picker. */
+  listed: z.boolean().optional(),
   cv: text,
   exampleScore: z.number().int().min(0).max(100),
   exampleSummary: text,
@@ -82,6 +85,7 @@ export const stages = [
   "rejected",
   "withdrawn",
   "hired",
+  "deferred",
 ] as const;
 export type Stage = (typeof stages)[number];
 export const stageLabels: Record<Stage, string> = {
@@ -93,10 +97,12 @@ export const stageLabels: Record<Stage, string> = {
   rejected: "Proces zakończony",
   withdrawn: "Wycofana",
   hired: "Zatrudnienie",
+  deferred: "Odłożony",
 };
 export const nextStages: Record<Stage, Stage[]> = {
-  submitted: ["reviewed", "rejected"],
-  reviewed: ["interview_invited", "rejected"],
+  submitted: ["reviewed", "interview_invited", "deferred", "rejected"],
+  reviewed: ["interview_invited", "deferred", "rejected"],
+  deferred: ["interview_invited", "rejected"],
   interview_invited: ["first_conversation_held", "rejected"],
   first_conversation_held: ["continued", "rejected"],
   continued: ["hired", "rejected"],
@@ -104,6 +110,21 @@ export const nextStages: Record<Stage, Stage[]> = {
   withdrawn: [],
   hired: [],
 };
+/** Stages from which the candidate list offers one-click invite/defer decisions. */
+export const openDecisionStages: Stage[] = ["submitted", "reviewed", "deferred"];
+/**
+ * Prepared own-work card (idea I7, test E5). Statements are copied from the candidate's own
+ * text; an empty string means the candidate did not describe it.
+ */
+export const ownWorkSchema = z.object({
+  area: shortText,
+  self: text.min(1),
+  others: text,
+  result: text,
+  materialType: shortText,
+  materialNote: text,
+});
+export type OwnWork = z.infer<typeof ownWorkSchema>;
 const applicationSchema = z.object({
   id,
   candidateId: id,
@@ -117,6 +138,7 @@ const applicationSchema = z.object({
   generatedAnswer: text,
   score: z.number().int().min(0).max(100),
   summary: text,
+  ownWork: ownWorkSchema.optional(),
   stage: z.enum(stages),
   events: z
     .array(z.object({ stage: z.enum(stages), at: z.iso.datetime(), note: text }))
@@ -140,6 +162,8 @@ export const stateSchema = z
     applications: z.array(applicationSchema).max(2000),
     saved: z.array(z.object({ candidateId: id, jobId: id })).max(5000),
     drafts: z.array(draftSchema).max(1000),
+    /** Moderator setting for test E5: show the own-work card to employers. */
+    ownWorkCard: z.boolean().default(true),
   })
   .superRefine((s, ctx) => {
     const problem = (message: string) => ctx.addIssue({ code: "custom", message });
@@ -213,14 +237,15 @@ export type Action =
   | { type: "stage"; applicationId: string; stage: Stage; note: string }
   | { type: "withdraw"; applicationId: string }
   | { type: "publish"; job: z.infer<typeof jobSchema> }
-  | { type: "company"; name: string; description: string };
+  | { type: "company"; name: string; description: string }
+  | { type: "own_work_card"; visible: boolean };
 
 export function initialState(): State {
   const state = stateSchema.parse({
     version: 1,
     activePersonId: null,
     ...marketplace,
-    people,
+    people: [...people, ...e5Study.people],
     applications: [],
     saved: [],
     drafts: [],
@@ -244,6 +269,7 @@ export function initialState(): State {
     stage: "submitted",
     events: [{ stage: "submitted", at: "2026-11-02T09:00:00.000Z", note: "" }],
   });
+  state.applications.push(...z.array(applicationSchema).parse(e5Study.applications));
   return stateSchema.parse(state);
 }
 export function publishedJobs(state: State): JobWithCompany[] {
@@ -344,6 +370,8 @@ export function transition(
       if (s.jobs[index].companyId !== p.companyId) fail("Nie można zmienić tej oferty.");
       s.jobs[index] = job;
     } else s.jobs.unshift(job);
+  } else if (action.type === "own_work_card") {
+    s.ownWorkCard = z.boolean().parse(action.visible);
   } else if (action.type === "company") {
     const p = employer();
     Object.assign(

@@ -337,3 +337,93 @@
   border-radius: 10px;
   background: var(--gui-canvas);
 }
+
+/* Own-work card (idea I7, test E5): host composition inside an existing outlined surface. */
+.own-work-card {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--foreground);
+}
+.own-work-card .own-work-title {
+  margin: 0 0 12px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+.own-work-title span {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--muted-foreground);
+}
+.own-work-card dl {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+.own-work-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 210px) minmax(0, 1fr);
+  gap: 4px 20px;
+}
+.own-work-row dt {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.own-work-row dd {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.own-work-row dd[data-missing] {
+  color: var(--muted-foreground);
+  font-style: italic;
+}
+.own-work-note {
+  color: var(--muted-foreground);
+  font-size: 14px;
+}
+.recruiting-record .own-work-card {
+  margin: 0 0 24px;
+  padding: 0 0 20px;
+  border-top: 0;
+  border-bottom: 1px solid var(--foreground);
+}
+@media (max-width: 700px) {
+  .own-work-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Candidate list decisions (test E5). */
+.candidate-list-tools {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+.candidate-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-top: 16px;
+  font-size: 14px;
+}
+.candidate-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.candidate-excerpt {
+  margin-top: 14px;
+  color: var(--muted-foreground);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media (max-width: 700px) {
+  .candidate-list-tools {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

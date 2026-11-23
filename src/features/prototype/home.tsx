@@ -47,7 +47,11 @@ export default function HomePage() {
               pracy — nie dopiskiem w employer brandingu.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/oferty" className={buttonVariants({ size: "lg" })}>
+              <Link
+                to="/oferty"
+                className={buttonVariants({ size: "lg" })}
+                data-attr="home-see-offers"
+              >
                 Zobacz oferty <ArrowRight />
               </Link>
               <Link

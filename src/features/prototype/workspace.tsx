@@ -14,6 +14,7 @@ import { currentPerson, publishedJobs, stageLabels, MIN_APPLICATION_ANSWER_LENGT
 import { PageTitle, Empty, NotFound, Notice } from "./shell";
 import { CvAttachment } from "./cv-attachment";
 import { MatchScore } from "./match-score";
+import { EmployerCandidateList } from "./candidate-list";
 import { RecruitingApplication } from "./recruiting-application";
 import { CandidateApplication } from "./candidate-application";
 
@@ -31,10 +32,11 @@ export function PersonPicker() {
   const [params] = useSearchParams();
   const next = params.get("next");
   const audience = params.get("audience");
+  const listed = state.people.filter((person) => person.listed !== false);
   const people =
     audience === "candidate" || audience === "employer"
-      ? state.people.filter((person) => person.role === audience)
-      : state.people;
+      ? listed.filter((person) => person.role === audience)
+      : listed;
   const safeNext = next && /^\/(?!\/)/.test(next) && !next.startsWith("/auth") ? next : null;
   return (
     <section className="prototype-section max-w-4xl">
@@ -103,7 +105,9 @@ export function WorkspaceHome() {
   );
   return (
     <>
-      <PageTitle>Witaj, {person.name.split(" ")[0]}</PageTitle>
+      <PageTitle>
+        Witaj, <span className="ph-no-capture">{person.name.split(" ")[0]}</span>
+      </PageTitle>
       <div className="grid gap-5 sm:grid-cols-3">
         {[
           ["Aplikacje", applications.length],
@@ -174,13 +178,13 @@ export function ProfilePage({ preview = false }: { preview?: boolean }) {
         {preview ? person.name : "Twój profil"}
       </PageTitle>
       {preview ? (
-        <div className="prototype-panel space-y-4">
+        <div className="prototype-panel ph-no-capture space-y-4">
           <h2>{person.headline}</h2>
           <p>{person.location}</p>
           <p>{person.bio}</p>
         </div>
       ) : (
-        <form onSubmit={save} className="prototype-panel prototype-form">
+        <form onSubmit={save} className="prototype-panel prototype-form ph-no-capture">
           <Field label="Imię i nazwisko">
             <Input name="name" required maxLength={200} defaultValue={person.name} />
           </Field>
@@ -309,7 +313,7 @@ export function ApplyPage() {
           <header className="application-form-intro">
             <h2 id="application-form-title">Twoja aplikacja</h2>
             <p>
-              Aplikujesz jako <strong>{person.name}</strong>.
+              Aplikujesz jako <strong className="ph-no-capture">{person.name}</strong>.
             </p>
           </header>
           <section className="application-form-section" aria-labelledby="application-cv-title">
@@ -411,6 +415,11 @@ export function ApplyPage() {
   );
 }
 export function ApplicationsPage({ employer = false }: { employer?: boolean }) {
+  if (employer) return <EmployerCandidateList />;
+  return <CandidateApplications />;
+}
+function CandidateApplications() {
+  const employer = false;
   const { state } = usePrototype();
   const person = currentPerson(state)!;
   const [query, setQuery] = useState("");
@@ -436,7 +445,7 @@ export function ApplicationsPage({ employer = false }: { employer?: boolean }) {
       <div className="mt-6 space-y-4">
         {applications.length ? (
           applications.map((a) => (
-            <article className="prototype-panel" key={a.id}>
+            <article className="prototype-panel ph-no-capture" key={a.id}>
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   <Link

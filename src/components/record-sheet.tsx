@@ -33,14 +33,18 @@ export function RecordSheet({
             </Tabs.Tab>
           ))}
         </Tabs.List>
-        {attachment && <div className="record-attachment">{attachment}</div>}
+        {attachment && <div className="record-attachment ph-no-capture">{attachment}</div>}
         {sections.map((section) => (
-          <Tabs.Panel key={section.value} value={section.value} className="record-reading">
+          <Tabs.Panel
+            key={section.value}
+            value={section.value}
+            className="record-reading ph-no-capture"
+          >
             {section.content}
           </Tabs.Panel>
         ))}
       </Tabs.Root>
-      {children && <div className="record-section">{children}</div>}
+      {children && <div className="record-section ph-no-capture">{children}</div>}
       {footer && <footer className="record-footer">{footer}</footer>}
     </section>
   );
