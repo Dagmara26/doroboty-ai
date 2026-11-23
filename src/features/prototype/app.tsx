@@ -1,4 +1,6 @@
-import { HashRouter, Routes, Route, Navigate } from "react-router";
+import { useEffect, useRef } from "react";
+import { HashRouter, Routes, Route, Navigate, useLocation } from "react-router";
+import { trackPageview } from "@/lib/analytics";
 import { PrototypeProvider } from "./store";
 import { Shell, NotFound } from "./shell";
 import { AppErrorBoundary } from "./error-boundary";
@@ -18,6 +20,19 @@ import {
 import { EmployerJobs, EmployerJobEditor, CompanyEditor } from "./employer";
 import { SettingsPage, PrivacyPage } from "./settings";
 import { CasePage } from "./case";
+// The initial pageview is captured by PostHog on load; later hash-route changes are sent here.
+function RoutePageviews() {
+  const { pathname } = useLocation();
+  const initial = useRef(true);
+  useEffect(() => {
+    if (initial.current) {
+      initial.current = false;
+      return;
+    }
+    trackPageview();
+  }, [pathname]);
+  return null;
+}
 function AppRoutes() {
   return (
     <Routes>
@@ -153,6 +168,7 @@ export function App() {
     <AppErrorBoundary>
       <PrototypeProvider>
         <HashRouter>
+          <RoutePageviews />
           <AppRoutes />
         </HashRouter>
       </PrototypeProvider>

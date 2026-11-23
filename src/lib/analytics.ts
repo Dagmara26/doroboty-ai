@@ -1,3 +1,5 @@
+import type { PostHog } from "posthog-js";
+
 // Browser product analytics (PostHog, EU cloud).
 // The project key is a public write-only ingestion key, safe to ship in the frontend.
 // Override per environment with VITE_POSTHOG_KEY / VITE_POSTHOG_HOST.
@@ -5,12 +7,20 @@ const POSTHOG_KEY =
   import.meta.env.VITE_POSTHOG_KEY ?? "phc_whgKdZAXH52sWn4gAvLR44tUskp2w7CULPJLfMnUd5jF";
 const POSTHOG_HOST = import.meta.env.VITE_POSTHOG_HOST ?? "https://eu.i.posthog.com";
 
+let client: PostHog | null = null;
+
 const LOCAL_HOSTS = new Set(["localhost", "127.0.0.1", "[::1]"]);
 
 // Analytics run only on a deployed site: never in local dev/preview or automated browsers,
 // so `npm run dev` and the e2e "no external requests" checks stay offline.
 export function shouldEnableAnalytics(hostname: string, automated: boolean): boolean {
   return Boolean(POSTHOG_KEY) && !automated && !LOCAL_HOSTS.has(hostname);
+}
+
+// PostHog only sees pathname changes; hash routes (/#/oferty) keep the same pathname,
+// so route changes are reported explicitly from the router (see RoutePageviews).
+export function trackPageview(): void {
+  client?.capture("$pageview");
 }
 
 export function initAnalytics(): void {
@@ -29,6 +39,7 @@ export function initAnalytics(): void {
         // notes, profile) are blocked in replays and ignored by autocapture.
         session_recording: { maskAllInputs: true },
       });
+      client = posthog;
     })
     .catch(() => {
       // Analytics are optional; a blocked or failed load must never affect the app.

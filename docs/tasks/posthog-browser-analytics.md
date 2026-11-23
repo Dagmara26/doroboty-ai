@@ -29,3 +29,9 @@ Collect browser events (pageviews, clicks) from the deployed prototype in PostHo
 - Privacy: `ph-no-capture` (ignored by autocapture, blocked in replays) on the shared Input and Textarea primitives, CvAttachment, RecordSheet attachment/reading panels/children (notes), application record header, candidate list cards, workspace applications list, profile preview and form, applying-as name, welcome name, shell identity block and name link. Persona picker stays capturable (fixed synthetic personas, useful for analysis).
 - Session replay: `session_recording: { maskAllInputs: true }` in code; project setting „Record user sessions” must be on.
 - Validation (cloud copy, Node 22): `tsc --noEmit`, `eslint --max-warnings=0 src`, `vitest run` (32 tests) and `prettier --check src` pass. Build and e2e were not run (design-system assets not staged); run `./scripts/verify` locally.
+
+## Follow-up: hash-route pageviews (production check 2026-11-23)
+
+- Production check after deploy 028c3bd: PostHog loads with the correct project key, initial `$pageview` and `$autocapture` (click on „Jak wybieramy role”) arrive in Activity → Live, session replay recorder loads.
+- Gap found: navigating between hash routes produced no further `$pageview` (PostHog `history_change` only reacts to pathname changes; HashRouter changes only the hash).
+- Fix: `trackPageview()` in src/lib/analytics.ts and `RoutePageviews` in src/features/prototype/app.tsx send `$pageview` on every route pathname change after the first render. No-op when analytics are disabled.
